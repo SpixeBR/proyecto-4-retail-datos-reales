@@ -22,6 +22,7 @@ import argparse
 import logging
 import sys
 from dataclasses import dataclass, field
+from itertools import pairwise
 from pathlib import Path
 
 import numpy as np
@@ -95,7 +96,7 @@ def quitar_superposicion_de_hojas(df: pd.DataFrame, log: Log) -> pd.DataFrame:
         return df
     hojas = list(dict.fromkeys(df["hoja"]))  # orden original
     columnas = [c for c in df.columns if c != "hoja"]
-    for anterior, siguiente in zip(hojas, hojas[1:]):
+    for anterior, siguiente in pairwise(hojas):
         inicio = df.loc[df["hoja"] == siguiente, "InvoiceDate"].min()
         fin = df.loc[df["hoja"] == anterior, "InvoiceDate"].max()
         if fin < inicio:
@@ -268,7 +269,9 @@ def limpiar(crudo: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFra
     otros = df[~df["tipo"].isin(["venta", "devolucion"])]
 
     validar(ventas, devoluciones, total, len(ventas) + len(devoluciones) + len(otros))
-    orden = lambda d: d.sort_values(["fecha", "factura"]).reset_index(drop=True)  # noqa: E731
+    def orden(d: pd.DataFrame) -> pd.DataFrame:
+        return d.sort_values(["fecha", "factura"]).reset_index(drop=True)
+
     return orden(ventas), orden(devoluciones), orden(otros), log.a_dataframe()
 
 

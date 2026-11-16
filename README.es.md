@@ -2,6 +2,8 @@
 
 🇬🇧 [English version](README.md) · 🇪🇸 Español
 
+[![tests](https://github.com/SpixeBR/proyecto-4-retail-datos-reales/actions/workflows/tests.yml/badge.svg)](https://github.com/SpixeBR/proyecto-4-retail-datos-reales/actions/workflows/tests.yml)
+
 Proyecto de portfolio con **datos reales y sucios**, donde las anomalías no se conocían de antemano y hubo que descubrirlas con análisis.
 
 **Datos:** *Online Retail II* (UCI Machine Learning Repository). 1.067.371 líneas de factura de un e-commerce mayorista de regalos del Reino Unido, de diciembre de 2009 a diciembre de 2011.

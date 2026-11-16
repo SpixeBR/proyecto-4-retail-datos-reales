@@ -2,6 +2,8 @@
 
 🇬🇧 English · 🇪🇸 [Versión en español](README.es.md)
 
+[![tests](https://github.com/SpixeBR/proyecto-4-retail-datos-reales/actions/workflows/tests.yml/badge.svg)](https://github.com/SpixeBR/proyecto-4-retail-datos-reales/actions/workflows/tests.yml)
+
 A portfolio project on **real, messy data** where the anomalies were not known in advance and had to be discovered through analysis.
 
 **Data:** *Online Retail II* (UCI Machine Learning Repository). 1,067,371 invoice lines from a UK-based wholesale gift e-commerce business, December 2009 to December 2011.

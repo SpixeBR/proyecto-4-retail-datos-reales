@@ -10,8 +10,14 @@ import pandas as pd
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from limpiar_retail import (  # noqa: E402
-    ErrorDeDatos, Log, clasificar, limpiar, marcar_precios_atipicos, normalizar, quitar_superposicion_de_hojas,
+from limpiar_retail import (
+    ErrorDeDatos,
+    Log,
+    clasificar,
+    limpiar,
+    marcar_precios_atipicos,
+    normalizar,
+    quitar_superposicion_de_hojas,
 )
 
 
@@ -124,7 +130,7 @@ def test_pipeline_no_pierde_filas_y_separa_salidas():
         fila(StockCode="POST", Price=18.0, Quantity=1),
         fila(Quantity=-10, Price=0.0, **{"Customer ID": np.nan}),
     ])
-    ventas, devoluciones, otros, log = limpiar(crudo)
+    ventas, devoluciones, otros, _log = limpiar(crudo)
     assert len(ventas) + len(devoluciones) + len(otros) == len(crudo)
     assert len(ventas) == 2 and len(devoluciones) == 1
     assert devoluciones.loc[0, "factura_compra"] == "500002"   # se empareja con la compra previa

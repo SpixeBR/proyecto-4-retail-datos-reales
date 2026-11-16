@@ -1,0 +1,17 @@
+paso,filas,detalle
+Filas leídas,1067371,2 hoja(s)
+Quitar superposición de hojas,22523,'Year 2009-2010' repetía 01/12/2010–09/12/2010 de 'Year 2010-2011' (idéntico)
+Normalizar códigos,3346,códigos con minúsculas o espacios unificados (ej. '72349b' → '72349B')
+Clasificar: venta,1015088,venta de productos (cantidad y precio positivos)
+Clasificar: devolucion,17974,factura 'C' de un producto: devolución o cancelación
+Clasificar: envio,3788,"cargos de envío (POST, DOT, C2): ingreso, pero no venta de producto"
+Clasificar: ajuste_contable,1906,"deudas incobrables, comisiones, cargos bancarios, descuentos y ajustes manuales"
+Clasificar: ajuste_inventario,5936,"precio 0 y sin cliente: mercadería dañada, perdida o encontrada"
+Clasificar: sin_cargo,61,precio 0 con cliente: entregas sin cargo
+Clasificar: vale_regalo,78,venta de vales de regalo (no es un producto físico)
+Clasificar: prueba,17,"productos de prueba del sistema (TEST001, TEST002)"
+Clasificar: dato_invalido,0,"fecha, cantidad o precio ilegibles, cantidad 0 o combinación imposible"
+Marcar precios atípicos,881,"precio más de 10 veces lejos del habitual del producto (se marcan, no se borran)"
+Marcar líneas repetidas,11733,"líneas idénticas en la misma factura (se marcan, no se borran)"
+Emparejar devoluciones,16110,devoluciones con una compra previa del mismo cliente y producto
+Marcar anulaciones en 24 h,1290,"toda la cantidad comprada, dentro de las 24 h: pedido corregido, no devolución de producto"

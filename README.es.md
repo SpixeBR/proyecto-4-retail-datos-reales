@@ -124,7 +124,7 @@ Los resultados limpios (`data/processed/`) ya están incluidos, así que el note
 
 ## Licencias y fuente de los datos
 
-- **Código:** licencia [MIT](LICENSE) © 2026 Bruno.
+- **Código:** licencia [MIT](LICENSE) © 2026 Bruno Rojas.
 - **Datos:** Chen, D. (2012). *Online Retail II* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5CG6D. Licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) de UCI. Los archivos de `data/processed/` derivan de ese dataset (limpiados y clasificados) y conservan esa licencia y su atribución. La licencia MIT cubre solo el código, no los datos.
 
 **Herramientas:** Python, pandas, NumPy, SciPy, scikit-learn, matplotlib, pytest, Jupyter.

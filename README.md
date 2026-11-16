@@ -126,7 +126,7 @@ The clean outputs (`data/processed/`) are already included, so the notebook can 
 
 ## Licenses and data source
 
-- **Code:** [MIT](LICENSE) © 2026 Bruno.
+- **Code:** [MIT](LICENSE) © 2026 Bruno Rojas.
 - **Data:** Chen, D. (2012). *Online Retail II* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5CG6D. Licensed by UCI under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The files in `data/processed/` are derived from that dataset (cleaned and classified) and keep that license and attribution. The MIT license applies to the code only, not to the data.
 
 **Tools:** Python, pandas, NumPy, SciPy, scikit-learn, matplotlib, pytest, Jupyter.

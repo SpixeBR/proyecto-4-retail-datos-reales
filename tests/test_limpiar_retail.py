@@ -116,7 +116,7 @@ def test_producto_con_pocas_ventas_no_se_evalua():
 
 def test_distribucion_muy_sesgada_marca_solo_extremos():
     rng = np.random.default_rng(0)
-    precios = list(np.round(rng.lognormal(mean=1, sigma=0.4, size=500), 2)) + [400.0, 0.01]
+    precios = [*np.round(rng.lognormal(mean=1, sigma=0.4, size=500), 2), 400.0, 0.01]
     v = marcar_precios_atipicos(ventas_de(precios))
     assert set(v.loc[v["precio_atipico"], "precio"]) == {400.0, 0.01}
 

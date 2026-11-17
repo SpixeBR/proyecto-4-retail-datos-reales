@@ -1,0 +1,5 @@
+exclude = [".venv"]
+
+[lint]
+extend-select = ["I", "C4", "RUF"]
+allowed-confusables = ["–", "−", "×"]
